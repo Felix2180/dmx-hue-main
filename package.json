@@ -1,0 +1,87 @@
+{
+    "name": "dmx-hue",
+    "version": "2.0.1",
+    "description": "Art-Net node zum steuern von Philips hue lampen via dmx",
+    "type": "module",
+    "preferGlobal": true,
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Felix2180/dmx-hue-main.git"
+    },
+    "exports": "./index.js",
+    "bin": {
+      "dmx-hue": "./bin/dmx-hue.js"
+    },
+    "scripts": {
+      "lint": "xo",
+      "lint:fix": "xo --fix",
+      "start": "./bin/dmx-hue.js",
+      "test": "xo",
+      "release:check": "semantic-release --dry-run"
+    },
+    "keywords": [
+      "philips",
+      "hue",
+      "dmx",
+      "artnet",
+      "art-net",
+      "universe",
+      "node",
+      "cli",
+      "light",
+      "show",
+      "bridge"
+    ],
+    "author": {
+      "name": "Felix Hardt",
+      "url": "https://github.com/Felix2180"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/Felix2180/dmx-hue-main",
+    "bugs": {
+      "url": "https://github.com/Felix2180/dmx-hue-main/issues"
+    },
+    "dependencies": {
+      "chalk": "^5.2.0",
+      "color": "^4.2.3",
+      "conf": "^11.0.1",
+      "inquirer": "^9.1.4",
+      "minimist": "^1.2.8",
+      "node-hue-api": "^4.0.11"
+    },
+    "devDependencies": {
+      "semantic-release": "^21.0.1",
+      "semantic-release-npm-github": "^4.0.0",
+      "xo": "^0.54.1"
+    },
+    "engines": {
+      "node": ">=16.0.0"
+    },
+    "prettier": {
+      "trailingComma": "none",
+      "bracketSpacing": true
+    },
+    "xo": {
+      "space": true,
+      "prettier": true,
+      "envs": [
+        "node"
+      ],
+      "rules": {
+        "unicorn/no-process-exit": "off",
+        "max-params": "off",
+        "no-throw-literal": "off",
+        "unicorn/no-array-reduce": "off",
+        "complexity": "off"
+      }
+    },
+    "release": {
+      "extends": "semantic-release-npm-github",
+      "branches": "main"
+    },
+    "files": [
+      "bin",
+      "lib",
+      "index.js"
+    ]
+  }
